@@ -5,7 +5,7 @@ button.addEventListener("click", edad);*/
 const edad = () => {
     //let num = 0;
     //let num = prompt("Introduzca la edad a consultar: ");
-    let num = document.getElementById('num').value;
+    let num = document.getElementById('num').valueGIT;
     console.log(num);
     const respuesta = num <18 ? "Esta persona es menor de edad" : "Esta persona es mayor de edad.";
     console.log(respuesta);
