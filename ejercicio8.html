@@ -36,34 +36,22 @@
           </ul>
         </div>
       </nav>
-      <h1 class="formulario">Localculadora 🤪</h1>
+      <h1 class="formulario">Comparador numerico</h1>
       <div class="formulario">
       <form>
         <div class="form-group">
-        <button type="button" onclick="localculadora()" class="btn btn-primary">Comenzar!</button>
+        <label for="numero1">Numero 1</label>
+        <input type="number" class="form-control" id="numero1" name="numero1">
         </div>
-        <div class="container-fluid">
-          <div class="row">
-            <h2 class="flex-fill elementoNumero" id="elemento0">⠀</h2>
-            <h2 class="flex-fill elementoNumero" id="elemento1">⠀</h2>
-            <h2 class="flex-fill elementoNumero" id="elemento2">⠀</h2>
-            <h2 class="flex-fill elementoNumero" id="elemento3">⠀</h2>
-            <h2 class="flex-fill elementoNumero" id="elemento4">⠀</h2>
-            <h2 class="flex-fill elementoNumero" id="elemento5">⠀</h2>
-            <h2 class="flex-fill elementoNumero" id="elemento6">⠀</h2>
-            <h2 class="flex-fill elementoNumero" id="elemento7">⠀</h2>
-            <h2 class="flex-fill elementoNumero" id="elemento8">⠀</h2>
-            <h2 class="flex-fill elementoNumero" id="elemento9">⠀</h2>
+        <div class="form-group">
+          <label for="numero2">Numero 2</label>
+          <input type="number" class="form-control" id="numero2" name="numero2">
           </div>
-        </div>
-        <br>
+        <button type="button" onclick="comparador()" class="btn btn-primary">Calcular</button>
       </form>
       </div>
       <div class="formulario">
-        <h3 id="negativos"></h3>
-        <h3 id="positivos"></h3>
-        <h3 id="multiplos"></h3>
-        <h3 id="sumaPares"></h3>
+        <h3 id="respuesta4"></h3>
       </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

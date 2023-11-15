@@ -138,8 +138,43 @@ const edad = () => {
   
 //EJERCICIO 7
 
-const arregloNumeros = () => {
-  const numeros = [10];
-  
-}
+const localculadora = () => {
+  const numeros = [];
+  for(let i=0;i<10;i++)
+  {
+    numeroActual = parseInt(prompt(`Ingrese el numero ${i+1}:`),10);
+    console.log(numeroActual);
+    numeros.push(numeroActual);
+    document.getElementById(`elemento${i}`).innerHTML = numeros[i];
+    console.log(numeros[i]);
+  }
+  let negativos = 0;
+  let positivos = 0;
+  let multiplos = 0;
+  let sumaPares = 0;
+  for(i=0;i<numeros.length;i++){
+    if(numeros[i] <0){
+      negativos++
+    }
+  }
+  document.getElementById(`negativos`).innerHTML = `El numero de elementos negativos es: ${negativos}`
+  for(i=0;i<numeros.length;i++){
+    if(numeros[i] >= 0){
+      positivos++
+    }
+  }
+  document.getElementById(`positivos`).innerHTML = `El numero de elementos positivos es: ${positivos}`
+  for(i=0;i<numeros.length;i++){
+    if(numeros[i]%15 === 0){
+      multiplos++
+    }
+  }
+  document.getElementById(`multiplos`).innerHTML = `El numero de elementos multiplos de 15 es: ${multiplos}`
+  for(i=0;i<numeros.length;i++){
+    if(numeros[i]%2 === 0){
+      sumaPares= sumaPares+numeros[i]
+    }
+  }
+  document.getElementById(`sumaPares`).innerHTML = `La suma de los elementos pares es: ${sumaPares}`
+};
 
