@@ -187,3 +187,92 @@ const multiplo = () => {
   }
   document.getElementById(`tablaDel10`).innerHTML = tabla
 }
+
+const celsiusAFahrenheit = () => {
+  let numeroCelsius = document.getElementById('celsius').value;
+  let fahrenheit = ((numeroCelsius * 9.0 / 5.0) + 32.0)
+  console.log(fahrenheit)
+  if(fahrenheit>13 && fahrenheit<33){
+    document.getElementById(`fahrenheit`).innerHTML = `Temperatura: ${fahrenheit}F° <br> Temperatura baja.`
+  }else if (fahrenheit>32 && fahrenheit<69){
+    document.getElementById(`fahrenheit`).innerHTML = `Temperatura: ${fahrenheit}F° <br> Temperatura adecuada.`
+  }else if (fahrenheit>67 && fahrenheit<97){
+    document.getElementById(`fahrenheit`).innerHTML = `Temperatura: ${fahrenheit}F° <br> Temperatura alta.`
+  }else{
+    document.getElementById(`fahrenheit`).innerHTML = `Temperatura: ${fahrenheit}F° <br> Temperatura desconocida.`
+  }
+}
+
+const calcuedades = () => {
+  const manana = [];
+  const tarde = [];
+  const noche = [];
+  for(let i=0;i<5;i++)
+  {
+    numeroActual = parseInt(prompt(`Ingrese la edad del alumno ${i+1} de la mañana:`),10);
+    console.log(numeroActual);
+    manana.push(numeroActual);
+    document.getElementById(`manana${i}`).innerHTML = manana[i];
+    console.log(manana[i]);
+  }
+  for(let i=0;i<6;i++)
+  {
+    numeroActual = parseInt(prompt(`Ingrese la edad del alumno ${i+1} de la tarde:`),10);
+    console.log(numeroActual);
+    tarde.push(numeroActual);
+    document.getElementById(`tarde${i}`).innerHTML = tarde[i];
+    console.log(tarde[i]);
+  }
+  for(let i=0;i<11;i++)
+  {
+    numeroActual = parseInt(prompt(`Ingrese la edad del alumno ${i+1} de la noche:`),10);
+    console.log(numeroActual);
+    noche.push(numeroActual);
+    document.getElementById(`noche${i}`).innerHTML = noche[i];
+    console.log(noche[i]);
+  }
+  let promedioManana = 0;
+  let promedioTarde = 0;
+  let promedioNoche= 0;
+  let promedioMayor = 0;
+  let workingSuma = 0;
+  const sumas = (array) => {
+    workingSuma = 0;
+    for(i=0;i<array.length;i++){
+      workingSuma += array[i]
+    }
+  }
+
+  const rounding = (n) => {
+    localNumber = Math.round((n + Number.EPSILON) * 100) / 100;
+    return localNumber
+  }
+
+  const promedio = (array) => {
+    let promedioLocal = workingSuma/array.length
+    promedioRedondeado = rounding(promedioLocal)
+    return promedioRedondeado
+  }
+  
+  sumas(manana)
+  promedioManana = promedio(manana)
+  document.getElementById(`promedioManana`).innerHTML = `Promedio de edad de alumnos de la Mañana: ${promedioManana}`
+
+  sumas(tarde)
+  promedioTarde = promedio(tarde)
+  document.getElementById(`promedioTarde`).innerHTML = `Promedio de edad de alumnos de la Tarde: ${promedioTarde}`
+
+  sumas(noche)
+  promedioNoche = promedio(noche)
+  document.getElementById(`promedioNoche`).innerHTML = `Promedio de edad de alumnos de la Noche: ${promedioNoche}`
+
+  const promedios = [promedioManana,promedioTarde,promedioNoche]
+  for(let i=0;i<3;i++){
+    if(promedios[i]>promedioMayor){
+      promedioMayor = promedios[i]
+    }
+  }
+  document.getElementById(`promedioMayor`).innerHTML = `El promedio mayor es: ${promedioMayor}`
+};
+
+
