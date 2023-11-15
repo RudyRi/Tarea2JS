@@ -178,3 +178,12 @@ const localculadora = () => {
   document.getElementById(`sumaPares`).innerHTML = `La suma de los elementos pares es: ${sumaPares}`
 };
 
+const multiplo = () => {
+  let numeroTrabajo = document.getElementById('multiplo10').value;
+  const tabla = []
+  for(i=1;i<=10;i++){
+    multiploNumero = numeroTrabajo*i
+    tabla.push(`${numeroTrabajo}x${i}=${multiploNumero}<br>`)
+  }
+  document.getElementById(`tablaDel10`).innerHTML = tabla
+}
