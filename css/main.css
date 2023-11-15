@@ -39,3 +39,12 @@
   .textAlign{
     text-align: center;
   }
+
+  .elementoNumero{
+    padding: 10px;
+    margin: 5px;
+    background-color: gainsboro;
+    border: 10px;
+    border-color: black;
+    border-radius: 5px;
+  }
